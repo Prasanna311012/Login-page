@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link,useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import axios from "axios";
 
 const SignUp = () => {
 
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
     const [uname, setUname] = useState("")
     const [upass, setUpass] = useState("")
@@ -35,8 +35,10 @@ const SignUp = () => {
                 navigate("/");
             }
         }).catch(err => {
-            alert("Signup failed: " + err.response.data.message);
+            const message = err.response?.data?.message || err.message || "Unknown error";
+            alert("Signup failed: " + message);
         });
+
     }
 
     return (
