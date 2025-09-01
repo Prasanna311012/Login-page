@@ -32,6 +32,8 @@ app.post("/login", (req, res) => {
         res.status(401).json({ success: false, message: "Invalid credentials" });
     }
 });
-app.listen(3000, function () {
-    console.log("Server start...")
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, function () {
+    console.log(`Server running on port ${PORT}`)
 })
