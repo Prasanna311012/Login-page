@@ -24,7 +24,7 @@ const SignUp = () => {
             return;
         }
 
-        axios.post("http://localhost:3000/signup", {
+        axios.post("https://login-page-1-8s3q.onrender.com/signup", {
             username: uname,
             password: upass,
         }).then(res => {

@@ -10,7 +10,7 @@ const Login = () => {
 
 
   function check() {
-    axios.post(`http://localhost:3000/login`, { username: user, password: pass })
+    axios.post(`https://login-page-1-8s3q.onrender.com/login`, { username: user, password: pass })
       .then(res => {
         if (res.data.success) {
           navigate("/success")
